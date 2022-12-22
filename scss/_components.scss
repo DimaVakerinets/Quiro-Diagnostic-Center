@@ -136,9 +136,9 @@
 }
 
 .desc__item {
-    
-    margin-bottom: 11.1rem;
+        margin-bottom: 11.1rem;
 }
+
 
 
 
@@ -146,39 +146,100 @@
 
 
 .card {
+   
 
-    &__item {
-        background: #F9F1FE;
+    &__call {
+        background-color: $color-thrid;
         border-radius: 1.5rem;
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
+        padding: 4.6rem 2.6rem;
         flex-direction: column;
-        justify-content: flex-end;
-        gap: 3rem;
+        text-align: center;
+        gap: 30px;
+
+        &:hover {
+            background: $color-primary;
+            .card-text__primary,.card-text__desc,.card__link,.icon-card {
+                color: $color-white;
+            }
+            .card__link:hover {
+                color:blue;
+            }
+        }
+    
+        
+
+    }
+
+    &__link {
+        text-align: center;
+    }
+
+    &__fird {
+        background-color: $color-thrid;
+        border-radius: 1.5rem;
+        padding: 4.6rem 2.6rem;
+        flex-direction: column;
+        text-align: center;
+        &:hover {
+            background: $color-primary;
+            .card-text__primary,.card-text__desc,.card__link,.icon-card {
+                color: $color-white;
+            }
+            
+    
+        }
         
     }
 
-    
+    &__serv {
+        background-color: $color-thrid;
+        border-radius: 1.5rem;
+        padding: 4.6rem 2.6rem;
+        flex-direction: column; 
+        text-align: center;  
+        &:hover {
+            background: $color-primary;
+            .card-text__primary,.card-text__desc,.card__link,.icon-card {
+                color: $color-white;
+           
+            }
+            
+        }
+    }
 }
+
+
 
 .card-text {
 
     &__primary {
+
         @include text ($font-base, 600, 2.4rem, 2.8rem, $color-dark); 
+        margin-bottom: 1.7rem;
    
     }
 
     &__desc {
         @include text ($font-base, 400, 1.6rem, 1.9rem,$color-dark );
+        width: 318px;
+        text-align: center;
+        margin-bottom: 0.6rem;
+        
     }
 }
 .card__link {
 
     @include text ($font-base, 600, 1.6rem, 1.9rem, $color-primary);
-    text-decoration-line: underline;
+    margin-bottom: 3.7rem;
+    
 }
-   
+  
+
+
+
+
+
+
 .text {
 
 		&__primary {
@@ -203,6 +264,22 @@
 
 
 
+.doctor {
+    
+}
+
+
+.ellipse {
+    width: 7.2rem;
+    height: 7.2rem;
+}
+
+
+.doc-block__text{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
 .doc {
     
     
@@ -211,6 +288,9 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        margin-bottom: 12.9rem;
+        width: 37rem;
+        
         
     }
 }
@@ -219,15 +299,20 @@
 .doc-text {
     @include text ($font-base, 600, 2rem, 2.3rem, $color-black);
     padding: 0 1.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
    
 		&__secondary {
             @include text ($font-base, 400, 1.6rem, 1.9rem, $color-dark);
             margin-bottom: 1rem;
+
 		}
 
 		&__desc {
             @include text ($font-base, 400, 1.6rem, 1.9rem, $color-dark);
             margin-bottom: 2.8rem;
+            width: 29.3rem;
 		}
 }
 .doctor-btn {
@@ -248,30 +333,65 @@
 
 
 
-.black {
-    
- background: #1C1B1F;
- border-radius: 10px;
- max-width: 100%;
- margin-bottom: 13.1rem;
-}
-.row {
-}
-.col-12 {
-}
-.black-text {
 
-		&__primary {
-            @include text ($font-base, 700, 3.6rem, 4.2rem, $color-white);
+
+
+
+
+
+
+.newsletter {
+    padding: 8rem 0;
+    margin-bottom: 13.1rem;
+    background: $color-black;
+    border-radius: 1rem;
+    flex-direction: column;
+
+    &__title {
+            margin-bottom: 4.7rem ;
             text-align: center;
-		}
-}
-.btn {
-    @include text ($font-base, 600, 2rem, 2.3rem, $color-white);
-    background: $color-primary;
-    border-radius: 22px;
-    padding: 1rem 2.5rem;
-    
+            @include text($font-base, 700, 3.6rem, 4.2rem, $color-white);
+    }
+
+    &__form {
+            padding: 0;
+            position: relative;
+            text-align: center;
+    }
+
+    &__input {   
+             align-items: center;
+            width: 100%;
+            background: $color-thrid;
+            border-radius: 5rem;
+            border: 0;
+            outline: 0;
+            padding: 2rem 0 2.5rem 3.1rem;
+            padding-right: 18rem;
+             @include text($font-base, 400, 1.6rem, 1.9rem, $color-black);
+            &::placeholder {
+                color: $color-primary;}
+    }
+
+        &__btn {
+            position: absolute;
+            padding: 1rem 2.4rem;
+            background: $color-primary;
+            border-radius: 2.2rem;
+            border: 0;
+            outline: 0;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%)
+        }
+
+        &__link {
+            @include text($font-base, 600, 2rem, 2.3rem, $color-white);
+
+            &:hover {
+                color: $color-thrid;
+            }
+        }
 }
 
 

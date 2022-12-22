@@ -1,0 +1,51 @@
+
+.footer {
+   
+    
+    background: $color-thrid;
+    
+
+}
+
+
+
+.footer-text {
+    @include text ($font-base, 600, 2.4rem, 2.8rem, $color-dark);
+    &__desc {
+        @include text ($font-base, 400, 1.6rem, 1.9rem, $color-dark);
+    }
+    &__secondary {
+        @include text ($font-base, 400, 1.6rem, 1.9rem, $color-dark);
+        margin-top: 2.6rem; 
+        width: 431px;
+    }
+
+    &__tel {
+        @include text ($font-base, 400, 1.6rem, 1.9rem, $color-dark);
+        padding: 1.6rem 0;
+    }
+}
+
+.footer-text2 {
+    @include text ($font-base, 600, 2.4rem, 2.8rem, $color-dark);
+    
+    margin-bottom: 1.7rem;
+
+}
+.footer-text-hour {
+    @include text ($font-base, 400, 1.6rem, 1.9rem, $color-dark);
+        margin-top: 1.5rem; 
+}
+
+.footer-logo {
+    @include text ($font-base, 600, 2.4rem, 2.8rem, $color-dark);
+}
+
+
+
+
+
+
+
+
+   
